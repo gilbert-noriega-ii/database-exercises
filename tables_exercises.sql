@@ -16,7 +16,7 @@ show create table employees;
  
  describe departments;
  
- #employees and departments are both tables inside of the employee database
+ #employees and departments are both tables inside of the employee database. Both tables are used to create another table called dept_emp 
  
  describe dept_manager;
  
