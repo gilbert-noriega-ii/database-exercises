@@ -1,23 +1,33 @@
 show databases;
 
+# Use database_name
 use employees;
 
 select database();
 
 show tables;
 
+# DESCRIBE == Structure in Sequel Pro
 describe employees;
+describe departments;
+describe salaries;
 
+# Show CREATE TABLE == Table Info in Sequel Pro
 show create table employees;
  
- #emp_no, birth_date, hire_date
- #first_name, last_name
- #gender
+#Which table(s) do you think contain a numeric type column?
+# titles, salaries, employees, dept_manager
+
+#Which table(s) do you think contain a string type column?
+#all except salary
+
+#Which table(s) do you think contain a date type column?
+#all except department
  
- describe departments;
- 
+ #What is the relationship between the employees and the departments tables?
  #employees and departments are both tables inside of the employee database. Both tables are used to create another table called dept_emp 
  
+ #Show the SQL that created the dept_manager table.
  describe dept_manager;
  
  show create table dept_manager;
