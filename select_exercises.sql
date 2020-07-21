@@ -28,7 +28,7 @@ where name = 'Nevermind';
 #Which albums were released in the 1990s
 select release_date
 from albums
-where release_date like '1990';
+where release_date >= 1990 and release_date <= 1999;
 
 #Which albums had less than 20 million certified sales
 select sales
