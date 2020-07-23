@@ -7,7 +7,7 @@ SELECT DISTINCT title
 FROM titles;
 
 #Find your query for employees whose last names start and end with 'E'. Update the query find just the unique last names that start and end with 'E' using GROUP BY.
-SELECT DISTINCT last_name
+SELECT last_name
 FROM employees
 WHERE last_name LIKE 'e%e'
 GROUP BY last_name;
@@ -39,7 +39,14 @@ WHERE first_name IN ('Irena', 'Vidya', 'Maya')
 GROUP BY gender;
 
 #Recall the query the generated usernames for the employees from the last lesson. Are there any duplicate usernames?
-SELECT LOWER(CONCAT(SUBSTR(first_name, 1, 1), SUBSTR(last_name, 1, 4), "_", SUBSTR(birth_date,6,2), SUBSTR(birth_date,3,2))) AS username, first_name, last_name, birth_date, COUNT(*)
-FROM employees
-ORDER BY username;
+SELECT LOWER(CONCAT(SUBSTR(first_name, 1, 1), 
+					SUBSTR(last_name, 1, 4), 
+					"_", 
+					SUBSTR(birth_date,6,2), 
+					SUBSTR(birth_date,3,2)
+					)
+				) AS username, first_name, last_name, birth_date
+FROM employees;
+
 #yes there are duplicate usernames
+
